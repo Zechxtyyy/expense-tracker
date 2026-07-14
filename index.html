@@ -1,0 +1,94 @@
+<h1>Expense Tracker</h1>
+
+<div class="card-form">
+    <div class="form-input">
+        <input 
+        id="namaTransaksi"
+        placeholder="Nama Transaksi">
+    
+        <input 
+        id="nominal"
+        placeholder="Ketik Nominal">
+    
+        <input 
+        type="date" 
+        id="tanggal">
+    
+        <select id="jenis">
+            <option>Pemasukan</option>
+            <option>Pengeluaran</option>
+        </select>
+    </div>
+    
+    <div class="menu-button">
+    <button 
+        id="btnTransaksi"
+        onclick="inputTransaksi()">
+            Tambah</button>
+
+    <button 
+        id="btnBatal"
+        onclick="batalTransaksi()">
+            Batal</button>
+    </div>
+</div>
+
+
+<div class="card-tools">
+    <input 
+    type="text"
+    id="cariTransaksi"
+    placeholder="Cari Transaksi"
+    oninput="tampilkanTransaksi()">
+
+    <select id="filter">
+        <option value="semua">Semua</option>
+        <option value="Pemasukan">Pemasukan</option>
+        <option value="Pengeluaran">Pengeluaran</option>
+    </select>
+
+    <select id="urutan">
+        <option value="terbaru">Terbaru</option>
+        <option value="terlama">Terlama</option>
+    </select>
+
+    <button 
+    id="btnExport"
+    onclick="exportCSV()">Export CSV</button>
+    <button id="btnTema">Dark Mode</button>
+
+</div>
+
+
+<div class="card-saldo">
+    <h2></h2>
+    <p id="saldo"></p>
+</div>
+
+<div class="container-total">
+    <div class="card-pemasukan">
+        <h3>Pemasukan</h3>
+        <p id="totalPemasukan"></p>
+    </div>
+
+    <div class="card-pengeluaran">
+        <h3>Pengeluaran</h3>
+        <p id="totalPengeluaran"></p>
+    </div>
+
+    <div class="card-info">
+        <h3>Total Transaksi</h3>
+        <p id="totalTransaksi"></p>
+    </div>
+
+    <div class="card-info">
+        <h3>Transaksi Terbesar</h3>
+        <p id="transaksiTerbesar"></p>
+    </div>
+</div>
+
+<ul id="daftarTransaksi"></ul>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
